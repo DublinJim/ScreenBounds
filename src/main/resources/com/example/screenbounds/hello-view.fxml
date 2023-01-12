@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.screenbounds.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.screenbounds.Controller">
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <Button fx:id="btn1" layoutX="73.0" layoutY="37.0" mnemonicParsing="false" onAction="#getBounds" text="Get Bounds"/>
+    <Label layoutX="393.0" layoutY="138.0" text="Height">
+        <font>
+            <Font name="Exo 2 Semi Bold" size="12.0"/>
+        </font>
+    </Label>
+    <Label layoutX="114.0" layoutY="138.0" text="Width">
+        <font>
+            <Font name="Exo 2 Semi Bold" size="12.0"/>
+        </font>
+    </Label>
+    <Text fx:id="txtWidth" layoutX="33.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+          textAlignment="CENTER" wrappingWidth="196.35205078125">
+        <font>
+            <Font name="Palatino Linotype" size="25.0"/>
+        </font>
+    </Text>
+    <Text fx:id="txtHeight" layoutX="313.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"
+          textAlignment="CENTER" wrappingWidth="196.35205078125">
+        <font>
+            <Font name="Palatino Linotype" size="25.0"/>
+        </font>
+    </Text>
+    <Button fx:id="btnReset" layoutX="70.0" layoutY="274.0" mnemonicParsing="false" onAction="#reset"
+            prefHeight="25.0" prefWidth="78.0" text="Reset"/>
+
+</AnchorPane>
