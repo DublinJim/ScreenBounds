@@ -21,20 +21,19 @@ public class Controller implements Initializable {
     public void getBounds() {
         for (Screen screen : Screen.getScreens()) {
             Rectangle2D screenBounds = screen.getVisualBounds();
-
             txtHeight.setText(String.valueOf(screenBounds.getHeight()));
             txtWidth.setText(String.valueOf(screenBounds.getWidth()));
-
         }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        txtHeight.setText("Press Bounds");
+        txtWidth.setText("Press Bounds");
     }
 
     public void reset() {
-        txtWidth.setText(null);
-        txtHeight.setText(null);
+        txtHeight.setText("_______");
+        txtWidth.setText("_______");
     }
 }
